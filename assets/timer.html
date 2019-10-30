@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="milligram.css">
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(material.woff2) format('woff2');
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -moz-font-feature-settings: 'liga';
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      height: 100vh;
+      padding: 10px 0;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .exercise-name {
+      background-color: rgb(255, 0, 191);
+      margin: 10px 0 10px;
+      padding: 5px;
+      font-size: 2.5rem;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .exercise-remaining {
+      background-color: rgb(255, 0, 191);
+      margin: 10px 0 10px;
+      font-size: 6rem;
+      line-height: 6rem;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .exercise-remaining-bar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      height: 100%;
+    }
+
+    .exercise-remaining-time-text {
+      z-index: 100;
+      position: relative;
+      background-color: white;
+      padding: 0;
+      border-radius: 0.5rem;
+      border: 0.25rem black solid;
+      color: rgb(255, 0, 191);
+      min-width: 16rem;
+      margin: 1rem;
+      display: inline-block;
+    }
+
+    /* Required to make material icon fit with milligram button size */
+    .material-icons {
+      font-size: 36px;
+    }
+
+    .play-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .play-buttons>button {
+      padding: 0 0.25rem;
+      margin: 0 0.25rem;
+    }
+  </style>
+  <script src="howler.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <script>
+    var sound = new Howl({
+      "src": [
+        "audiosprite.mp3"
+      ],
+      "sprite": {
+        "prepare": [
+          0,
+          840
+        ],
+        "go": [
+          2000,
+          648.0000000000001
+        ],
+        "rest": [
+          4000,
+          839.9999999999999
+        ],
+        "allfinished": [
+          6000,
+          1152.0000000000002
+        ]
+      }
+    });
+    function loadElm() {
+      var app = Elm.Main.init({
+      });
+      const storageKey = 'stretchtimer.com data';
+      app.ports.cache.subscribe(function (data) {
+        localStorage.setItem(storageKey, data);
+      });
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        app.ports.onChange.send(stored);
+      }
+      window.addEventListener("storage", function (event) {
+        if (event.storageArea === localStorage && event.key === storageKey) {
+          app.ports.onChange.send(event.newValue);
+        }
+      }, false);
+      app.ports.play.subscribe(function (data) {
+        sound.play(data);
+      });
+    }
+
+    loadElm();
+  </script>
+</body>
+
+</html>

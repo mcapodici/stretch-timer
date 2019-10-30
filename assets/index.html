@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="milligram.css">
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Solway', serif;
+      margin-top: 10px;
+    }
+
+    img.screenshot {
+      width: 100%;
+      max-width: 300px;
+      border: 2px black solid;
+      border-radius: 20px;
+      padding: 10px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    h1.title {
+      font-size: 5em;
+      text-align: center;
+      background-color: tomato;
+      color: white;
+      padding: 100px 0px;
+    }
+
+    .sell p {
+      font-size: 2em;
+    }
+
+    .starttimer {
+      text-align: center;
+    }
+
+    .starttimer .button {
+      font-size: 2em;
+      height: 2em;
+      line-height: 2em;
+      margin: 1em 0em 2em;
+    }
+
+    .top {
+      display: flex;
+    justify-content: space-between;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+  <h1>Stretch Timer</h1>
+  <a href="//github.com"><h3>Source Code</h3></a>
+</div>
+  <h1 class="title">Do Your Exercises Perfectly</h1>
+  <div class="container">
+    <div class="sell">
+      <img class="screenshot" src="prepare.png" alt="screenshot" />
+      <p>Do you do a stretch or strength routine prescribed by your personal trainer, physio or one of your own? Having
+        a
+        hard time with timing, or tempted to skip exercises? This is the solution.</p>
+      <p><strong>Stretch Timer</strong> transforms your routine from a chore to a pleasure, giving you discipline and
+        convenince. You
+        won't
+        want to go back to a stop watch once you use it.</p>
+      <p>It tells you both on-screen and through voice when to start and stop and rest. It times every stretch, every
+        rest,
+        and includes preparation time to move from one position to another.</p>
+      <p>It says "All Finished" in a sweet way when you are done. Boy, that is satsifying after doing those training
+        exercises!</p>
+      <div class='starttimer'>
+        <a class='button' href='timer.html'>Start Stretch Timer</a></div>
+    </div>
+    <h1>How to use it</h1>
+    <h2>Concepts</h2>
+    <ul>
+      <li>The stretch timer runs from a web page, and works on all your devices.</li>
+      <li>The timer lets you create an exercise program, which is simply a sequence of exercises.</li>
+      <li>Each exercise has a name, provided by you, and some settings:</li>
+      <ul>
+        <li>The <strong>duration</strong> is the number of seconds to hold the stretch.</li>
+        <li>The <strong>rest duration</strong> is the number of seconds to rest before the next stretch.</li>
+        <li>The <strong>repetitions</strong> is the number of times to do the stretch followed by the rest period.</li>
+        <li>The <strong>prepare time</strong>  is the number of seconds you need to get into a position where you can start the stretch.
+          E.g. if you need to tie up a band to a door handle, then you might want 10 seconds to do this.</li>
+      </ul>
+      <li>When you start the exercise program, it will run through each exercise, and then say "prepare" with a count
+        down for the amount of prep time. It will then say "go" with a count down for the amount of stretch time.
+        It will then say "rest" with the count down for that too. It will then repeat for the number of reps you
+        specified, and move to the next exercise.
+      </li>
+      <li>You set up the exercise program through the web page, and the program is stored on your browser. There is
+        currently no way to save this anywhere else, but this may be added later.</li>
+    </ul>
+    <h2>How to use</h2>
+    <p>When you first open the app, there is no exercise program and you are invited to add your first stretch:</p>
+    <img class="screenshot" src="home.png" alt="screenshot" />
+    <p>Clicking "ADD YOUR FIRST STRETCH" will show this form with the fields to fill out for the timings I mentioned in
+      the Concepts section above:</p>
+
+    <img class="screenshot" src="addfirststretch.png" alt="screenshot" />
+    <p>Fill this in and click SAVE to add this first stretch. You will then see your exercsie program, with one
+      exercise:</p>
+    <img class="screenshot" src="exerciseprogram1.png" alt="screenshot" />
+    <p>You can add more by clicking ADD ANOTHER STRETCH. You can also click the ... button to perform actions on the
+      exercise, such as editing, deleting and moving:</p>
+    <img class="screenshot" src="dotdotdot.png" alt="screenshot" />
+    <p>When you are ready to start, click START and the program will begin. You will hear the voice say "Prepare":</p>
+    <img class="screenshot" src="prepare.png" alt="screenshot" />
+    <p>At any time click HOME to go back to the home screen. This pauses the routine so you can resume again. Also you
+      can use the navigation controls to skip back and ahead or pause the exercise</p>
+    <p>The up and down arrow buttons skip to the previous or next exercise. The back and forward buttons skip to the
+      previous or next rep. And the pause button lets you pause and resume the program.</p>
+    <p>If you want to start the program in a particular place, from the home screen click ... next to an exercise and
+      then click START HERE</p>
+    <img class="screenshot" src="dotdotdot.png" alt="screenshot" />
+    <p>And that is all there is too it. Good luck and happy stretching!</p>
+  </div>
+</body>
+
+</html>
