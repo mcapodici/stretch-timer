@@ -1,2 +1,4 @@
 /elm-stuff
 /dist
+# Local Netlify folder
+.netlify

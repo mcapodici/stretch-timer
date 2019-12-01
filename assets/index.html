@@ -29,7 +29,7 @@
     }
 
     h1.title {
-      font-size: 5em;
+      font-size: 4em;
       text-align: center;
       background-color: tomato;
       color: white;
@@ -44,16 +44,15 @@
       text-align: center;
     }
 
-    .starttimer .button {
-      font-size: 2em;
-      height: 2em;
-      line-height: 2em;
-      margin: 1em 0em 2em;
-    }
-
     .top {
       display: flex;
-    justify-content: space-between;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    img.githubmark {
+      width: 120px;
+      max-width: 10vw;
       margin: 10px;
     }
   </style>
@@ -61,9 +60,11 @@
 
 <body>
   <div class="top">
-  <h1>Stretch Timer</h1>
-  <a href="//github.com"><h3>Source Code</h3></a>
-</div>
+    <h1>Stretch Timer</h1>
+    <a href="//github.com/mcapodici/stretch-timer">
+      <img class="githubmark" src="githubmark.png" alt="Source Code on Github" />
+    </a>
+  </div>
   <h1 class="title">Do Your Exercises Perfectly</h1>
   <div class="container">
     <div class="sell">
@@ -93,7 +94,8 @@
         <li>The <strong>duration</strong> is the number of seconds to hold the stretch.</li>
         <li>The <strong>rest duration</strong> is the number of seconds to rest before the next stretch.</li>
         <li>The <strong>repetitions</strong> is the number of times to do the stretch followed by the rest period.</li>
-        <li>The <strong>prepare time</strong>  is the number of seconds you need to get into a position where you can start the stretch.
+        <li>The <strong>prepare time</strong> is the number of seconds you need to get into a position where you can
+          start the stretch.
           E.g. if you need to tie up a band to a door handle, then you might want 10 seconds to do this.</li>
       </ul>
       <li>When you start the exercise program, it will run through each exercise, and then say "prepare" with a count
@@ -127,6 +129,12 @@
       then click START HERE</p>
     <img class="screenshot" src="dotdotdot.png" alt="screenshot" />
     <p>And that is all there is too it. Good luck and happy stretching!</p>
+    <h2>
+      Source Code
+    </h2>
+    <p>Stretch Timer is free software. Source code is available on
+      <a href="//github.com/mcapodici/stretch-timer">Github</a>
+    </p>
   </div>
 </body>
 
