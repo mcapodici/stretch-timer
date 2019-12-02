@@ -8,7 +8,7 @@ The source code is licensed under the GNU GENERAL PUBLIC LICENSE v3. See LICENSE
 
 ## Screenshot
 
-![Alt text](assets/home.png?raw=true "Home Screen")
+<img src="assets/home.png?raw=true" width="300" alt="Home Screen Screenshot">
 
 More screenshots and instructions can be found at https://stretchtimer.comm the source of which is hosted in this repo.
 
