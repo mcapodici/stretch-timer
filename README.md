@@ -6,9 +6,10 @@ For more information and to use the app, visit https://stretchtimer.com
 
 The source code is licensed under the GNU GENERAL PUBLIC LICENSE v3. See LICENSE.md.
 
-## Screenshot
+## Screenshots
 
-<img src="assets/home.png?raw=true" width="300" alt="Home Screen Screenshot">
+<img src="assets/home.png?raw=true" width="200" alt="Home Screen Screenshot">
+<img src="assets/addfirststretch.png?raw=true" width="200" alt="Home Screen Screenshot">
 
 More screenshots and instructions can be found at https://stretchtimer.comm the source of which is hosted in this repo.
 
